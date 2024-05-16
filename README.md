@@ -33,19 +33,19 @@ The Governance teams, FIDL, Allocators, and Community meet for a bi-weekly call 
 The purpose of this repository is to manage the governance and evolution of specific of the program as insantiated in this diagram. [FIP](https://github.com/filecoin-project/FIPs/blob/master/FIPS/fip-0003.md) and illustrated in the follow![Governance Tree](https://github.com/filecoin-project/Allocator-Governance/assets/94004586/02a4b162-6535-48bc-886f-184a3e24e190)
 
 # Operational Guidelines
-As stated above, Notaries are given a high degree of autonomy in their decision making power. In order to build trust in the stability of this mechanism, below outlined are some basic criteria by which all Allocators are expected to adhere. In the future these restrictions may be reduced or removed, upon approval by the community (going through the standard PR process).
+Allocators are given a high degree of autonomy in their decision making power. In order to build trust in the stability of this mechanism, below outlined are some basic criteria by which all Allocators are expected to adhere. In the future these restrictions may be reduced or removed, upon approval by the community (going through the standard PR process).
 
-Upfront Disclosures: Prior to being confirmed as a Allocator, Allocators are expected to disclose all relevant addresses which they control, have a financial stake in, or are strongly connected to by other means. For the disclosure, the Notary should state the relevant addresses and the nature of the relationship.
+Upfront Disclosures: Prior to being confirmed as a Allocator, Allocators are expected to disclose all relevant addresses which they control, have a financial stake in, or are strongly connected to by other means. For the disclosure, the Allocator should state the relevant addresses and the nature of the relationship.
 
-Promoting Client Best Practices: Notaries agree to educate approved clients about the best practices for using their DataCap (e.g. how to request additonal services from miners, storing data redundantly across many miners, etc). Some reference information can be found here.
+Promoting Client Best Practices: Allocators agree to educate approved clients about the best practices for using their DataCap (e.g. how to request additonal services from miners, storing data redundantly across many miners, etc). Some reference information can be found here.
 
 Commitment to effeciently serving the Network: Allocators agree to serve as fiduciaries of the Network, striving to work towards bringing useful data onto Filecoin and improving the experience for clients to do so. Allocators should generally be able to respond to Client applications and updates within 3 days, and should be comfortable communicating with Clients and Allocators if an application needs to be redirected.
 
 No Self Dealing: To prevent conflicts of interest, Allocators should not allocate DataCap to Clients over which they control the private keys, or to a Client who intends to specifically spend the allocated DataCap with an address affiliated with the Allocator. When in doubt, Allocators should bias towards transparency (i.e. public disclosure) or to getting a different Notary to handle the individual request.
 
-Operating in Good Faith: Allocators hold a position of trust in the network, and as such it is expected that they operate keeping the Principles of this mechanism in mind. While each form of abuse cannot be exhaustively defined, Allocators are expected to bias towards caution and act in a way that promotes transparency. Notaries should expect to potentially recieve requests or questions for allocation decisions (within reason) - and should make decisions with this in mind.
+Operating in Good Faith: Allocators hold a position of trust in the network, and as such it is expected that they operate keeping the Principles of this mechanism in mind. While each form of abuse cannot be exhaustively defined, Allocators are expected to bias towards caution and act in a way that promotes transparency. Allocators should expect to potentially recieve requests or questions for allocation decisions (within reason) - and should make decisions with this in mind.
 
-Community Governance Participation: It is expected that Allocators regularly attend the scheduled Governance calls. As these calls are a forum to shape this process, it is important to ensure Notaries are present to provide their context, learnings, and input.
+Community Governance Participation: It is expected that Allocators regularly attend the scheduled Governance calls. As these calls are a forum to shape this process, it is important to ensure Allocators are present to provide their context, learnings, and input.
 
 # Allocator DataCap Process
 ![DataCap Flow](https://github.com/filecoin-project/Allocator-Governance/assets/94004586/dd3f9154-c852-4e77-8363-b42f72a354bf)
