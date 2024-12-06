@@ -9,8 +9,7 @@ This is the Governance resource for the Allocator project of Filecoin Plus. With
 Short 5 minute summary of the Allocator Program [Allocator Model Youtube](https://youtu.be/6xEhH3wDGtw?list=PL_0VrY55uV1-cwaAU8lcChONxYQ_Bj9hx&t=1001)
 
 # Allocator Bi-Weekly Meetings
-The Governance teams, FIDL, Allocators, and Community meet for a bi-weekly call to discuss the programatic updates.  The call is open to the public and all are encouraged to join in order to learn more about Filecoin PLus.
-![2024 Schedule](https://github.com/filecoin-project/Allocator-Governance/assets/94004586/d335f9e4-bff9-4d69-883a-4fdf3a35de83)
+The Governance teams, FIDL, Allocators, and Community meet for a bi-weekly call to discuss the programatic updates.  The call is open to the public and all are encouraged to join in order to learn more about Filecoin Plus.  The last call of 2024 is scheduled to take place on 17December.  The 2025 schedule will be posted soon.
 
 
 
