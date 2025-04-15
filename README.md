@@ -46,6 +46,30 @@ Allocators are given a high degree of autonomy in their decision making power. I
 
 * Community Governance Participation: It is expected that Allocators regularly attend the scheduled Governance calls. As these calls are a forum to shape this process, it is important to ensure Allocators are present to provide their context, learnings, and input.
 
+# Programmatic Policies
+1. Filecoin Plus is designed for all client actors with quality data who engage in distributed onboarding. Client actors can be either data owners or preparers (including SPs), who either provide some form of KYC (and KYB) information to earn social trust or prove long-term commitment (i.e. collateral in a trustless notary).
+1. The Filecoin Plus program defines 'quality data' as all content that meets local regulatory requirements AND
+    * the data owner wants to see on the network, including private/encrypted data;
+    * or is open and retrievable;
+    * or demonstrates proof of concept or utility of the network, such as efforts to improve onboarding.
+
+1. Allocators are responsible for performing diligence on their clients and datasets.
+1. Each allocator pathway will be subject to an audit performed by the MetaAllocator that supervises that pathway. When the pathway has distributed 75% of the DataCap they received in the previous round, the allocator should trigger the review by submitting the appropriate template in this GitHub repo ([current link](https://github.com/filecoin-project/Allocator-Governance/issues/new?template=-datacap-refresh--.md)).
+
+1. Storage providers will be tested for retrievability using the Spark protocol (https://github.com/filecoin-station/spark). As an allocator, you are responsible for holding your clients accountable, and those clients are responsible for working with reputable Storage Providers that meet your onboarding, distribution, and retrieval requirements.
+1. Every dataset participating in the Fil+ program should be stored in at least two different physical regions.
+
+1. If there are no client allocations or developer progress after 2 months of approval of an allocator, that pathway's DataCap may be paused or revoked.
+
+1. Within two weeks of approval & receiving initial DataCap allocation, each allocator must publish a Readme document detailing:
+    * Short description of pathway for clients, to be included in Allocator website.
+    * Contact info, such as Slack ID.
+    * Detailed Allocator policies, procedures, and requirements.
+    * Risk mitigation strategies - the processes for protecting your organization, reputation, and pathway from abuse. For example, what Operational Security (OpSec) standards, user agreements, alerts, or throttling mechanisms will you employ?
+    * Dispute Resolutions - A dispute within the context of DataCap allocation refers to any contention or disagreement arising between parties involved in the storage and retrieval of data on the Filecoin network. This could involve discrepancies over DataCap distribution, disagreements on data compliance with stated parameters, or conflicts over the execution of storage deals. Disputes may be internal, involving yourself and your client, or external, where you will need to defend your decisions against another active allocator or the Fil+ Governance Team.
+    * Compliance Audit Check - how do you plan to ensure that your clients, and the storage providers they interact with are all in compliance with both program-wide and pathway specific requirements.
+
+
 # Allocator DataCap Process
 ![DataCap Flow](https://github.com/filecoin-project/Allocator-Governance/assets/94004586/dd3f9154-c852-4e77-8363-b42f72a354bf)
 
