@@ -46,6 +46,38 @@ Allocators are given a high degree of autonomy in their decision making power. I
 
 * Community Governance Participation: It is expected that Allocators regularly attend the scheduled Governance calls. As these calls are a forum to shape this process, it is important to ensure Allocators are present to provide their context, learnings, and input.
 
+# Compliance Audit Policies & Process
+## Core Review Criteria for All Allocators
+Auditors assess the Allocator's performance using on-chain data from tools like datacapstats.io and CID audits, as well as off-chain data from bookkeeping sources.
+* Proposed claims versus evidence: Did the allocator uphold requirements (e.g. client types, SP relationships)?
+* DataCap Distribution & Utilization:
+    * Scaling trust over time
+    * Number of SPs connected to clients
+    * Number and size of unique datasets
+    * Time clients took to use DataCap
+    * Revoking unused DataCap
+* Client Behavior: Did clients use listed SPs and datasets?
+Provenance Checks: Verifying dataset ownership (e.g. attestations, contracts)
+* SP Info Gathering: KYB and diligence evidence
+## Enterprise Data Evaluation Path
+If the allocator supports Enterprise Data, the auditor may request:
+* Client KYC: ID documents, proof of address, risk assessments, business purpose
+* SP KYB: Incorporation docs, governance records, ownership proof, KYB reports
+* Non-Collusion Proofs: Signed affidavits, org charts, due diligence reports
+* Economic Transfer Evidence: Invoices, payment receipts, on-chain logs
+
+All documents must show clear separation and legitimate business relationships between clients and SPs.
+
+## Public/Open Data Evaluation Path
+For Open/Public datasets, the auditor will investigate:
+* Retrievability: Tested via Spark protocol (≤20ms latency, target RSR >75%); alternate proofs pending approval
+* Provenance: Public URLs, digital signatures, agreements with original data sources
+* Data Preparation Verification: Scripts, processing logs, and step-by-step audit trail
+* Justification for uploading duplicate datasets
+* Content Validation: Auditors may download and inspect stored data for authenticity
+
+Successful allocators must maintain transparency, diversity, and a strong audit trail throughout.
+
 # Allocator DataCap Process
 ![DataCap Flow](https://github.com/filecoin-project/Allocator-Governance/assets/94004586/dd3f9154-c852-4e77-8363-b42f72a354bf)
 
