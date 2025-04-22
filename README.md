@@ -46,6 +46,8 @@ Allocators are given a high degree of autonomy in their decision making power. I
 
 * Community Governance Participation: It is expected that Allocators regularly attend the scheduled Governance calls. As these calls are a forum to shape this process, it is important to ensure Allocators are present to provide their context, learnings, and input.
 
+---
+
 # Programmatic Policies
 1. Filecoin Plus is designed for all client actors with quality data who engage in distributed onboarding. Client actors can be either data owners or preparers (including SPs), who either provide some form of KYC (and KYB) information to earn social trust or prove long-term commitment (i.e. collateral in a trustless notary).
 1. The Filecoin Plus program defines 'quality data' as all content that meets local regulatory requirements AND
@@ -69,6 +71,39 @@ Allocators are given a high degree of autonomy in their decision making power. I
     * Dispute Resolutions - A dispute within the context of DataCap allocation refers to any contention or disagreement arising between parties involved in the storage and retrieval of data on the Filecoin network. This could involve discrepancies over DataCap distribution, disagreements on data compliance with stated parameters, or conflicts over the execution of storage deals. Disputes may be internal, involving yourself and your client, or external, where you will need to defend your decisions against another active allocator or the Fil+ Governance Team.
     * Compliance Audit Check - how do you plan to ensure that your clients, and the storage providers they interact with are all in compliance with both program-wide and pathway specific requirements.
 
+# Compliance Audit Policies & Process
+## Core Review Criteria for All Allocators
+Auditors assess the Allocator's performance using on-chain data from tools like datacapstats.io and CID audits, as well as off-chain data from bookkeeping sources.
+* Proposed claims versus evidence: Did the allocator uphold requirements (e.g. client types, SP relationships)?
+* DataCap Distribution & Utilization:
+    * Scaling trust over time
+    * Number of SPs connected to clients
+    * Number and size of unique datasets
+    * Time clients took to use DataCap
+    * Revoking unused DataCap
+* Client Behavior: Did clients use listed SPs and datasets?
+Provenance Checks: Verifying dataset ownership (e.g. attestations, contracts)
+* SP Info Gathering: KYB and diligence evidence
+## Enterprise Data Evaluation Path
+If the allocator supports Enterprise Data, the auditor may request:
+* Client KYC: ID documents, proof of address, risk assessments, business purpose
+* SP KYB: Incorporation docs, governance records, ownership proof, KYB reports
+* Non-Collusion Proofs: Signed affidavits, org charts, due diligence reports
+* Economic Transfer Evidence: Invoices, payment receipts, on-chain logs
+
+All documents must show clear separation and legitimate business relationships between clients and SPs.
+
+## Public/Open Data Evaluation Path
+For Open/Public datasets, the auditor will investigate:
+* Retrievability: Tested via Spark protocol (≤20ms latency, target RSR >75%); alternate proofs pending approval
+* Provenance: Public URLs, digital signatures, agreements with original data sources
+* Data Preparation Verification: Scripts, processing logs, and step-by-step audit trail
+* Justification for uploading duplicate datasets
+* Content Validation: Auditors may download and inspect stored data for authenticity
+
+**Successful allocators must maintain transparency, diversity, and a strong audit trail throughout.**
+
+---
 
 # Allocator DataCap Process
 ![DataCap Flow](https://github.com/filecoin-project/Allocator-Governance/assets/94004586/dd3f9154-c852-4e77-8363-b42f72a354bf)
