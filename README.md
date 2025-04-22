@@ -46,7 +46,8 @@ Allocators are given a high degree of autonomy in their decision making power. I
 
 * Community Governance Participation: It is expected that Allocators regularly attend the scheduled Governance calls. As these calls are a forum to shape this process, it is important to ensure Allocators are present to provide their context, learnings, and input.
 
-=======
+---
+
 # Programmatic Policies
 1. Filecoin Plus is designed for all client actors with quality data who engage in distributed onboarding. Client actors can be either data owners or preparers (including SPs), who either provide some form of KYC (and KYB) information to earn social trust or prove long-term commitment (i.e. collateral in a trustless notary).
 1. The Filecoin Plus program defines 'quality data' as all content that meets local regulatory requirements AND
@@ -102,6 +103,7 @@ For Open/Public datasets, the auditor will investigate:
 
 **Successful allocators must maintain transparency, diversity, and a strong audit trail throughout.**
 
+---
 
 # Allocator DataCap Process
 ![DataCap Flow](https://github.com/filecoin-project/Allocator-Governance/assets/94004586/dd3f9154-c852-4e77-8363-b42f72a354bf)
