@@ -1,3 +1,14 @@
+# **Announcement - Allocator Applications for new and existing organizations are live through July 11**
+The updated application form for Filecoin Plus (Fil+) is live! 
+
+New organizations applying to become Allocators.
+Existing Allocators updating pathway information to remain active.
+Submission Deadline: July 11, 2025 (6 weeks).
+
+Important: Existing Allocators who do not update their information risk having their DataCap sunset.
+- Apply Now: https://apply.allocator.tech/
+- For more details, steps to apply, and FAQ: https://github.com/filecoin-project/Allocator-Governance/discussions/374
+
 # About this page
 This is the Governance resource for the Allocator project of Filecoin Plus. Within this repo are the common links and 
 - Specification on governance, and operations layers.
@@ -9,10 +20,7 @@ This is the Governance resource for the Allocator project of Filecoin Plus. With
 Short 5 minute summary of the Allocator Program [Allocator Model Youtube](https://youtu.be/6xEhH3wDGtw?list=PL_0VrY55uV1-cwaAU8lcChONxYQ_Bj9hx&t=1001)
 
 # Allocator Bi-Weekly Meetings
-The Governance teams, FIDL, Allocators, and Community meet for a bi-weekly call to discuss the programatic updates.  The call is open to the public and all are encouraged to join in order to learn more about Filecoin Plus.  The last call of 2024 is scheduled to take place on 17December.  The 2025 schedule will be posted soon.
-
-
-
+The Governance teams, FIDL, Allocators, and Community meet for a bi-weekly call to discuss the programatic updates.  The call is open to the public and all are encouraged to join in order to learn more about Filecoin Plus.  
 - [Allocator bi-weekly meeting](https://www.youtube.com/playlist?list=PLp3zrT1ewY0kYN1hJpERMUxTCbFC4yZwN)
 - [Allocator Meeting Slides](https://drive.google.com/drive/folders/1zTy6YZWlG0KH6eQCEoKA8nDRP2JZnnp1)
 - [Allocator Meeting Invite](https://calendar.google.com/calendar/embed?src=c_k1gkfoom17g0j8c6bam6uf43j0%40group.calendar.google.com&ctz=America%2FLos_Angeles)
@@ -123,28 +131,30 @@ The Filecoin Plus program is intended to onboard high quality data to a distribu
 By focusing on standards and accountability, Fil+ should evolve while maintaining its core mandate - to onboard quality data to the Filecoin network.
 
 
-# New Application (for Allocators) Submission Guidelines
+# How to apply to become an Allocator of DataCap
 
-Standards for Submission:
-- Visit the Allocator Governance GitHub page.
-- Create a new pull request by adding a new file to the repository.
-- Name it appropriately, "Allocator application ".
-- Commit the change and add it as a branch, then click "Create pull request".
+Submission for operationally ready pathways:
+- Visit https://apply.allocator.tech/
+- Complete the Airtable form with your Organization and Pathway Details.
+- Veryify KYC for your organization at https://apply.allocator.tech/dashboard.
+- Track comments and feedback for application in https://github.com/filecoin-project/Allocator-Registry/.
 
-Required Documentation:
-- A comment will appear with a link to the Airtable, which serves as your actual application form.
-- Open this link in a new tab for easy access.
-- See the blog from [FIDL on their experience/input](https://blog.allocator.tech/2024/05/rolling-applications-are-open-for.html) on the application process
+Submission for Experiemental Pathway:
+- A novel allocation system and would like to test it out with DataCap to ensure it works as expected
+- Visit [https://apply.allocator.tech/](https://www.fidl.tech/apply-for-datacap_1)
 
-**2. New Application (for Allocators) Review and Approval**
+
+
+
+**1. New Application (for Allocators) Review and Approval**
 
 Community Review System:
 - All new applications are received and reviews on their ability to add value to the Filecoin Network.
 - Pathways are prioritized on their ability to onboard data as well as providing a novel approach [other than manual](https://blog.allocator.tech/2024/04/allocator-tech-blog.html).
 
 Approval Tiers:
-- RFA (pathway other than manual) with an existing readme and established MVP - immediate.
-- Manual Pathways which focus on a human verification - these will be onboarded as needed for the program.
+- RFA with an existing readme and established MVP - immediate.
+- Manual Pathways which focus on a human verification - these will be onboarded as needed for the program (Current open period is [live through July 11](https://github.com/filecoin-project/Allocator-Governance/discussions/374)).
 - Applications for new Pathways should be for a pathway that is ready to operate. Pathways which need to develop tooling in order to operate are encouraged to obtain a small amount of testing DataCap (DC).
 
 **3. Use of Governance Tools**
