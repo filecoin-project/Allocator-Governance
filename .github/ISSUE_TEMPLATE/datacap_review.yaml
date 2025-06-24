@@ -81,17 +81,19 @@ body:
     id: client_breakdowns
     attributes:
       label: "Client-specific Breakdown"
-      description: "Copy and complete the following for each client you allocated to"
+      description: "Complete the following I–V format for each client you allocated to"
       value: |
+        #### Client 1
+
         I. [Client Name](link)  
         - DC requested:  
         - DC granted so far:  
 
         II. **Dataset Completion**  
-        Provide deal(s) containing sample(s) of data
+        (Provide deal(s) containing sample(s) of data)
 
         III. **SP Match**  
-        Does the list of SPs provided match the list in the CID report?
+        (Does the list of SPs provided match the list in the CID report?)
 
         IV. **Replica Count**  
         Promised vs delivered:  
@@ -101,8 +103,31 @@ body:
         |--------|-------------|--------------|
         | f01234 | 83%         | YES          |
 
-        ---  
-        _(Repeat the above block for each client as needed)_
+        ---
+
+        #### Client 2
+
+        I. [Client Name](link)  
+        - DC requested:  
+        - DC granted so far:  
+
+        II. **Dataset Completion**  
+        (Provide deal(s) containing sample(s) of data)
+
+        III. **SP Match**  
+        (Does the list of SPs provided match the list in the CID report?)
+
+        IV. **Replica Count**  
+        Promised vs delivered:  
+
+        V. **SP Retrieval Performance**  
+        | SP ID  | % retrieval | Meets >75%? |
+        |--------|-------------|--------------|
+        | f05678 | 91%         | YES          |
+
+        ---
+
+        _(Add more client blocks as needed)_
 
   - type: markdown
     attributes:
