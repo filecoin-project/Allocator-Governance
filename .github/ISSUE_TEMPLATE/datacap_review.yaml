@@ -1,7 +1,7 @@
 name: "[DataCap Refresh]"
 description: Allocator's Request for a review of DC allocations
 title: "[DataCap Refresh] <1st/2nd/3rd> Review of <Allocator Organization Name>"
-labels: []
+labels: [Refresh]
 assignees:
   - Kevin-FF-USA
 body:
