@@ -1,0 +1,230 @@
+name: "[DataCap Refresh]"
+description: Allocator's Request for a review of DC allocations
+title: "[DataCap Refresh] <1st/2nd/3rd> Review of <Allocator Organization Name>"
+labels: []
+assignees:
+  - Kevin-FF-USA
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ⚠️ **Before you start:** Please update the issue title above by replacing `<1st/2nd/3rd>` with your review number and `<Allocator Organization Name>` with your org's name. DO NOT REMOVE [DataCap Refresh]
+
+  - type: dropdown
+    id: audit_type
+    attributes:
+      label: "What type of Audit did you opt into?"
+      options:
+        - Enterprise Data
+        - Public Open Data
+        - Market Based Allocator
+        - Automated Allocator
+    validations:
+      required: true
+
+  - type: input
+    id: json_number
+    attributes:
+      label: "What is your JSON hash (starts with _rec_)"
+    validations:
+      required: true
+
+  - type: input
+    id: allocator_application
+    attributes:
+      label: "Link to your allocator operations description"
+      placeholder: "https://..."
+      description: "Include a link to your client diligence, dispute resolution, and other allocator details per program policy: https://github.com/filecoin-project/Allocator-Governance?tab=readme-ov-file#programmatic-policies"
+    validations:
+      required: true
+
+  - type: input
+    id: compliance_report
+    attributes:
+      label: "Compliance Report"
+      placeholder: "https://datacapstats.io/allocators/..."
+      description: "Link to your latest report from https://datacapstats.io/allocators/"
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ### Previous Reviews
+
+  - type: object
+    id: previous_reviews
+    attributes:
+      label: "Previous Reviews"
+      description: "Only include reviews that already happened."
+      add: "Add a review"
+      fields:
+        - type: input
+          id: link
+          attributes:
+            label: "Review Link"
+            placeholder: "https://github.com/..."
+          validations:
+            required: true
+        - type: input
+          id: outcome
+          attributes:
+            label: "Outcome"
+            placeholder: "e.g. 5 PiB"
+          validations:
+            required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ### Current Allocation Distribution
+
+  - type: object
+    id: client_allocation_table
+    attributes:
+      label: "Client Allocation Table"
+      description: "Add each client and the DC granted to them in this allocation round."
+      add: "Add another client"
+      fields:
+        - type: input
+          id: client_name
+          attributes:
+            label: "Client Name"
+            placeholder: "Client A"
+          validations:
+            required: true
+        - type: input
+          id: dc_granted
+          attributes:
+            label: "DC Granted"
+            placeholder: "e.g. 3 PiB"
+          validations:
+            required: true
+
+  - type: object
+    id: client_breakdowns
+    attributes:
+      label: "Client-specific Review Blocks"
+      description: "Fill in for each client you allocated to in this round."
+      add: "Add client breakdown"
+      fields:
+        - type: input
+          id: client_name
+          attributes:
+            label: "Client Name"
+            placeholder: "e.g. client123"
+          validations:
+            required: true
+
+        - type: input
+          id: dc_requested
+          attributes:
+            label: "DC Requested"
+            placeholder: "e.g. 10 PiB"
+
+        - type: input
+          id: dc_granted_so_far
+          attributes:
+            label: "DC Granted So Far"
+            placeholder: "e.g. 5 PiB"
+
+        - type: textarea
+          id: dataset_completion
+          attributes:
+            label: "Dataset Completion"
+            placeholder: "Provide deal(s) containing sample(s) of data"
+
+        - type: textarea
+          id: sp_match
+          attributes:
+            label: "SP Match"
+            placeholder: "Does the list of SPs provided match the list in CID reports?"
+
+        - type: input
+          id: replica_count
+          attributes:
+            label: "Replica count (promised vs delivered)"
+            placeholder: "e.g. 3 vs 2"
+
+        - type: object
+          id: retrieval_performance
+          attributes:
+            label: "SP retrieval performance"
+            description: "Add SPs used by this client and their retrieval performance"
+            add: "Add another SP"
+            fields:
+              - type: input
+                id: sp_id
+                attributes:
+                  label: "SP ID"
+                  placeholder: "e.g. f01234"
+                validations:
+                  required: true
+
+              - type: input
+                id: retrieval_rate
+                attributes:
+                  label: "% Retrieval"
+                  placeholder: "e.g. 82%"
+                validations:
+                  required: true
+
+              - type: dropdown
+                id: above_threshold
+                attributes:
+                  label: "Meets >75% Retrieval?"
+                  options:
+                    - Yes
+                    - No
+                validations:
+                  required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ### Allocation Summary
+
+  - type: textarea
+    id: allocator_notes
+    attributes:
+      label: "Notes from the Allocator"
+      description: "Mention any notable events or incidents during this distribution"
+
+  - type: textarea
+    id: issues_reported
+    attributes:
+      label: "Issues or discrepancies reported?"
+      placeholder: "Yes/No. If Yes, please describe."
+
+  - type: textarea
+    id: risk_mitigation
+    attributes:
+      label: "Steps to minimize unfair practices"
+
+  - type: textarea
+    id: value_to_filecoin
+    attributes:
+      label: "Value to the Filecoin ecosystem"
+      description: "Describe how data onboarded through your allocator in this review cycle added value beyond your application"
+
+  - type: dropdown
+    id: maintained_standards
+    attributes:
+      label: "Confirm standards were maintained"
+      options:
+        - Yes
+        - No
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: diligence_review
+    attributes:
+      label: "Confirm understanding of diligence review process"
+      options:
+        - Yes
+        - No
+        - Other
+    validations:
+      required: true
