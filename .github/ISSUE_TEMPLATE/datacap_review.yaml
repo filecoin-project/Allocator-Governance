@@ -8,7 +8,11 @@ body:
   - type: markdown
     attributes:
       value: |
-        ⚠️ **Before you start:** Please update the issue title above by replacing `<1st/2nd/3rd>` with your review number and `<Allocator Organization Name>` with your org's name. DO NOT REMOVE [DataCap Refresh]
+        ⚠️ **Before you start:**  
+        Please edit the issue title above, replacing:
+        - `<1st/2nd/3rd>` with your current review number (e.g., 1st, 2nd, 3rd)
+        - `<Allocator Organization Name>` with the name of your organization
+        - DO NOT REMOVE [DataCap Refresh] please
 
   - type: dropdown
     id: audit_type
@@ -34,7 +38,7 @@ body:
     attributes:
       label: "Link to your allocator operations description"
       placeholder: "https://..."
-      description: "Include a link to your client diligence, dispute resolution, and other allocator details per program policy: https://github.com/filecoin-project/Allocator-Governance?tab=readme-ov-file#programmatic-policies"
+      description: "Link to client diligence, dispute resolution, etc., published per policy: https://github.com/filecoin-project/Allocator-Governance?tab=readme-ov-file#programmatic-policies"
     validations:
       required: true
 
@@ -47,137 +51,58 @@ body:
     validations:
       required: true
 
-  - type: markdown
-    attributes:
-      value: |
-        ### Previous Reviews
-
-  - type: object
+  - type: textarea
     id: previous_reviews
     attributes:
       label: "Previous Reviews"
-      description: "Only include reviews that already happened."
-      add: "Add a review"
-      fields:
-        - type: input
-          id: link
-          attributes:
-            label: "Review Link"
-            placeholder: "https://github.com/..."
-          validations:
-            required: true
-        - type: input
-          id: outcome
-          attributes:
-            label: "Outcome"
-            placeholder: "e.g. 5 PiB"
-          validations:
-            required: true
+      description: "Paste each entry as 'Link + Outcome' (e.g., 5 PiB)"
+      placeholder: |
+        - [1st review](https://github.com/filecoin-project/issue1) Outcome: 5 PiB
+        - [2nd review](https://github.com/filecoin-project/issue2) Outcome: 10 PiB
 
   - type: markdown
     attributes:
       value: |
         ### Current Allocation Distribution
 
-  - type: object
-    id: client_allocation_table
+  - type: textarea
+    id: allocation_table
     attributes:
       label: "Client Allocation Table"
-      description: "Add each client and the DC granted to them in this allocation round."
-      add: "Add another client"
-      fields:
-        - type: input
-          id: client_name
-          attributes:
-            label: "Client Name"
-            placeholder: "Client A"
-          validations:
-            required: true
-        - type: input
-          id: dc_granted
-          attributes:
-            label: "DC Granted"
-            placeholder: "e.g. 3 PiB"
-          validations:
-            required: true
+      description: "Enter client names and DataCap granted for this review round"
+      value: |
+        | Client name | DC granted |
+        | ----------- | ---------- |
+        | Client 1    | 0 PiB      |
+        | Client 2    | 0 PiB      |
+        | Client 3    | 0 PiB      |
 
-  - type: object
+  - type: textarea
     id: client_breakdowns
     attributes:
-      label: "Client-specific Review Blocks"
-      description: "Fill in for each client you allocated to in this round."
-      add: "Add client breakdown"
-      fields:
-        - type: input
-          id: client_name
-          attributes:
-            label: "Client Name"
-            placeholder: "e.g. client123"
-          validations:
-            required: true
+      label: "Client-specific Breakdown"
+      description: "Copy and complete the following for each client you allocated to"
+      value: |
+        I. [Client Name](link)  
+        - DC requested:  
+        - DC granted so far:  
 
-        - type: input
-          id: dc_requested
-          attributes:
-            label: "DC Requested"
-            placeholder: "e.g. 10 PiB"
+        II. **Dataset Completion**  
+        Provide deal(s) containing sample(s) of data
 
-        - type: input
-          id: dc_granted_so_far
-          attributes:
-            label: "DC Granted So Far"
-            placeholder: "e.g. 5 PiB"
+        III. **SP Match**  
+        Does the list of SPs provided match the list in the CID report?
 
-        - type: textarea
-          id: dataset_completion
-          attributes:
-            label: "Dataset Completion"
-            placeholder: "Provide deal(s) containing sample(s) of data"
+        IV. **Replica Count**  
+        Promised vs delivered:  
 
-        - type: textarea
-          id: sp_match
-          attributes:
-            label: "SP Match"
-            placeholder: "Does the list of SPs provided match the list in CID reports?"
+        V. **SP Retrieval Performance**  
+        | SP ID  | % retrieval | Meets >75%? |
+        |--------|-------------|--------------|
+        | f01234 | 83%         | YES          |
 
-        - type: input
-          id: replica_count
-          attributes:
-            label: "Replica count (promised vs delivered)"
-            placeholder: "e.g. 3 vs 2"
-
-        - type: object
-          id: retrieval_performance
-          attributes:
-            label: "SP retrieval performance"
-            description: "Add SPs used by this client and their retrieval performance"
-            add: "Add another SP"
-            fields:
-              - type: input
-                id: sp_id
-                attributes:
-                  label: "SP ID"
-                  placeholder: "e.g. f01234"
-                validations:
-                  required: true
-
-              - type: input
-                id: retrieval_rate
-                attributes:
-                  label: "% Retrieval"
-                  placeholder: "e.g. 82%"
-                validations:
-                  required: true
-
-              - type: dropdown
-                id: above_threshold
-                attributes:
-                  label: "Meets >75% Retrieval?"
-                  options:
-                    - Yes
-                    - No
-                validations:
-                  required: true
+        ---  
+        _(Repeat the above block for each client as needed)_
 
   - type: markdown
     attributes:
@@ -188,7 +113,7 @@ body:
     id: allocator_notes
     attributes:
       label: "Notes from the Allocator"
-      description: "Mention any notable events or incidents during this distribution"
+      description: "Mention any events or anomalies during the allocation round"
 
   - type: textarea
     id: issues_reported
@@ -199,32 +124,31 @@ body:
   - type: textarea
     id: risk_mitigation
     attributes:
-      label: "Steps to minimize unfair practices"
+      label: "Steps to minimize unfair or risky practices"
+      description: "Describe your due diligence and how unfaithful users are screened out"
 
   - type: textarea
     id: value_to_filecoin
     attributes:
       label: "Value to the Filecoin ecosystem"
-      description: "Describe how data onboarded through your allocator in this review cycle added value beyond your application"
+      description: "Describe the value added through this allocation round, beyond your original application"
 
   - type: dropdown
     id: maintained_standards
     attributes:
-      label: "Confirm standards were maintained"
+      label: "Confirm you maintained your application standards for all client allocations"
       options:
-        - Yes
-        - No
-        - Other
+        - "Yes"
+        - "No"
     validations:
       required: true
 
   - type: dropdown
     id: diligence_review
     attributes:
-      label: "Confirm understanding of diligence review process"
+      label: "Do you understand that a diligence review will follow and require updates to this issue?"
       options:
-        - Yes
-        - No
-        - Other
+        - "Yes"
+        - "No"
     validations:
       required: true
