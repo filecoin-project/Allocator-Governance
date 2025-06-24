@@ -29,7 +29,7 @@ body:
   - type: input
     id: json_number
     attributes:
-      label: "What is your JSON hash (starts with _rec_)"
+      label: "What is your JSON hash (starts with 'rec')"
     validations:
       required: true
 
@@ -56,9 +56,10 @@ body:
     attributes:
       label: "Previous Reviews"
       description: "Paste each entry as 'Link + Outcome' (e.g., 5 PiB)"
-      placeholder: |
-        - [1st review](https://github.com/filecoin-project/issue1) Outcome: 5 PiB
-        - [2nd review](https://github.com/filecoin-project/issue2) Outcome: 10 PiB
+      value: |
+        - [1st review] <link to the review> Outcome: <how many> PiB
+        - [2nd review] <link to the review> Outcome: <how many> PiB
+        _(Add more review blocks as needed)_
 
   - type: markdown
     attributes:
