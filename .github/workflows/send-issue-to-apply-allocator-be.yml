@@ -1,0 +1,25 @@
+name: Send issue to apply.allocator.tech
+
+on:
+  issues:
+    types:
+      - opened
+
+jobs:
+  send-issue-to-apply-allocator-be:
+    runs-on: ubuntu-latest
+    if: contains(github.event.issue.title, '[DataCap Refresh]')
+    env:
+      APPLY_ALLOCATOR_BACKEND_URL: ${{ vars.APPLY_ALLOCATOR_BACKEND_URL }}
+      GITHUB_EVENT_JSON: ${{ toJSON(github.event) }}
+      EVENT_NAME: ${{ github.event_name }}
+      EVENT_ACTION: ${{ github.event.action }}
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Send issue to apply.allocator
+        run: |
+          chmod +x .github/scripts/issue-sender.sh
+          .github/scripts/issue-sender.sh
+
