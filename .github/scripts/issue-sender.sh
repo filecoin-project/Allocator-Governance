@@ -13,18 +13,20 @@ if [[ -z "${APPLY_ALLOCATOR_BACKEND_URL}" ]]; then
     exit 1
 fi
 
-response=$(curl -s -w "\n%{http_code}" \
-  --header "Content-Type: application/json" \
-  --header "User-Agent: GitHub-Webhook-Sender" \
-  --request PUT \
-  --data "${GITHUB_EVENT_JSON}" \
-  "${APPLY_ALLOCATOR_BACKEND_URL}/api/v1/refreshes/upsert-from-issue")
-
-http_code=$(echo "$response" | tail -n1)
-body=$(echo "$response" | head -n -1)
-
-echo "Response status: ${http_code}"
-echo "Response body: ${body}"
+echo "Sending request..."
+response=$(curl -v \
+   --max-time 30 \
+   --header "Content-Type: application/json" \
+   --header "User-Agent: GitHub-Webhook-Sender" \
+   --header "bypass-tunnel-reminder: true" \
+   --request PUT \
+   --data "${GITHUB_EVENT_JSON}" \
+   "${APPLY_ALLOCATOR_BACKEND_URL}/api/v1/refreshes/upsert-from-issue") || {
+    curl_exit_code=$?
+    echo "❌ CURL FAILED with exit code: ${curl_exit_code}"
+    echo "${response}"
+    exit 2
+}
 
 if [[ ${http_code} -ge 200 && ${http_code} -lt 300 ]]; then
     echo "✅ Webhook sent successfully!"
