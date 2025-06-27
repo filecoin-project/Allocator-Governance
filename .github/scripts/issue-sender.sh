@@ -21,16 +21,14 @@ response=$(curl -v \
    --header "bypass-tunnel-reminder: true" \
    --request PUT \
    --data "${GITHUB_EVENT_JSON}" \
-   "${APPLY_ALLOCATOR_BACKEND_URL}/api/v1/refreshes/upsert-from-issue") || {
-    curl_exit_code=$?
-    echo "❌ CURL FAILED with exit code: ${curl_exit_code}"
-    echo "${response}"
-    exit 2
-}
+   "${APPLY_ALLOCATOR_BACKEND_URL}/api/v1/refreshes/upsert-from-issue")
 
-if [[ ${http_code} -ge 200 && ${http_code} -lt 300 ]]; then
-    echo "✅ Webhook sent successfully!"
+status=$(echo "$response" | jq -r '.status')
+
+if [[ $status -ge 200 && $status -lt 300 ]]; then
+    echo "✅ Success! Status: $status"
+    exit 0
 else
-    echo "❌ Webhook failed with status ${http_code}"
+    echo "❌ Webhook failed with status $status"
     exit 1
 fi
