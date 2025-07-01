@@ -4,12 +4,7 @@ on:
   issues:
     types:
       - opened
-  workflow_dispatch:
-    inputs:
-      test_mode:
-        description: 'Test mode'
-        required: false
-        default: 'false'
+      - edited
 
 jobs:
   send-issue-to-apply-allocator-be:
