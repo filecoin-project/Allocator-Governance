@@ -1,0 +1,9 @@
+# idea
+.idea
+
+# workflow tests
+workflow-test
+
+# local variables for testing
+.vars
+.secrets
