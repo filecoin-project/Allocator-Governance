@@ -29,7 +29,8 @@ body:
   - type: input
     id: json_number
     attributes:
-      label: "What is your JSON hash (starts with 'rec')"
+      label: "What is your JSON hash (starts with 'rec'). If you don't remember or remember only the v5 json name (which was a number), check your allocator json name here Allocator Applications/json_names_lookup.md"
+      placeholder: "DO NOT POST A URL, paste the name of your json that is a hash that starts with 'rec'"
     validations:
       required: true
 
