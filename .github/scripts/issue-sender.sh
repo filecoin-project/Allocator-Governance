@@ -23,12 +23,22 @@ response=$(curl -v \
    --data "${GITHUB_EVENT_JSON}" \
    "${APPLY_ALLOCATOR_BACKEND_URL}/api/v1/refreshes/upsert-from-issue")
 
-status=$(echo "$response" | jq -r '.status')
+status=$(echo "$response" | jq -r '.status // empty')
+message=$(echo "$response" | jq -r '.message // .error // empty')
+errors=$(echo "$response" | jq -r '.errors[]? // empty' | tr '\n' '; ')
 
 if [[ $status -ge 200 && $status -lt 300 ]]; then
     echo "✅ Success! Status: $status"
+    echo "## ✅ Webhook Success" >> "$GITHUB_STEP_SUMMARY"
+    echo "**Issue:** [$ISSUE_TITLE]($ISSUE_URL)" >> "$GITHUB_STEP_SUMMARY"
+    echo "**Status:** $status" >> "$GITHUB_STEP_SUMMARY"
     exit 0
 else
     echo "❌ Webhook failed with status $status"
+    echo "## ❌ Webhook Failed" >> "$GITHUB_STEP_SUMMARY"
+    echo "**Issue:** [$ISSUE_TITLE]($ISSUE_URL)" >> "$GITHUB_STEP_SUMMARY"
+    echo "**Status:** $status" >> "$GITHUB_STEP_SUMMARY"
+    [[ -n "$message" ]] && echo "**Message:** $message" >> "$GITHUB_STEP_SUMMARY"
+    [[ -n "$errors" ]] && echo "**Errors:** ${errors%; }" >> "$GITHUB_STEP_SUMMARY"
     exit 1
 fi
