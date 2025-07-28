@@ -1,14 +1,3 @@
-# **Announcement - Allocator Applications for new and existing organizations are live through July 11**
-The updated application form for Filecoin Plus (Fil+) is live! 
-
-New organizations applying to become Allocators.
-Existing Allocators updating pathway information to remain active.
-Submission Deadline: July 11, 2025 (6 weeks).
-
-Important: Existing Allocators who do not update their information risk having their DataCap sunset.
-- Apply Now: https://apply.allocator.tech/
-- For more details, steps to apply, and FAQ: https://github.com/filecoin-project/Allocator-Governance/discussions/374
-
 # About this page
 This is the Governance resource for the Allocator project of Filecoin Plus. Within this repo are the common links and 
 - Specification on governance, and operations layers.
@@ -34,6 +23,7 @@ The Governance teams, FIDL, Allocators, and Community meet for a bi-weekly call 
 - [Distribution Metrics](https://filecoinpulse.pages.dev/)
 - [DataCap Stats IO](https://datacapstats.io/notaries?showInactive=true)
 - [Spark Retrevial Metrics](https://bajtos.grafana.net/public-dashboards/9af156c3266d4d8384385623d0d2a76c?orgId=1)
+- [Apply to become an Allocator](apply.allocator.tech)
   
 
 # Filecoin Plus Governance
