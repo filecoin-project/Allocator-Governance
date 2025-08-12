@@ -76,11 +76,11 @@ body:
       label: "Client Allocation Table"
       description: "Enter client names and DataCap granted for this review round"
       value: |
-        | Client name | DC granted |
-        | ----------- | ---------- |
-        | Client 1    | 0 PiB      |
-        | Client 2    | 0 PiB      |
-        | Client 3    | 0 PiB      |
+        |Client ID ("f...") | Client name | DC granted |
+        |------------------ | ----------- | ---------- |
+        |f345678            | Client 1    | 0 PiB      |
+        |f456789            | Client 2    | 0 PiB      |
+        |f561234            | Client 3    | 0 PiB      |
     validations:
       required: true
       
