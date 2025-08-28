@@ -124,7 +124,7 @@ By focusing on standards and accountability, Fil+ should evolve while maintainin
 # How to apply to become an Allocator of DataCap
 
 Submission for operationally ready pathways:
-- Visit https://apply.allocator.tech/
+- Visit https://apply.allocator.tech/ **Note, applications for new Organizations were closed on 11July2025 and will reopen for new orgs to join the program when need arrises. If building a new Automated/Market solution please see the details for submitting as an Experimental Pathway.
 - Complete the Airtable form with your Organization and Pathway Details.
 - Veryify KYC for your organization at https://apply.allocator.tech/dashboard.
 - Track comments and feedback for application in https://github.com/filecoin-project/Allocator-Registry/.
