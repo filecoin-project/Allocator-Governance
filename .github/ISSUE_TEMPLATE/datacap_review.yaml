@@ -38,11 +38,9 @@ body:
   - type: input
     id: old_allocator_id
     attributes:
-      label: "If you have changed the wallet for on-chain DC allocation between rounds v5 and v6, what was your old allocatorID?"
-      description: "If you don't know - you can find it in your old json as "allocator_id""
+      label: "What was your old allocatorID?"
+      description: "Only if you have changed the wallet for on-chain DC allocation between rounds v5 and v6. If you don't know - you can find it in your old json as "allocator_id""
       placeholder: "f0..."
-    validations:
-      required: false
       
   - type: input
     id: allocator_application
