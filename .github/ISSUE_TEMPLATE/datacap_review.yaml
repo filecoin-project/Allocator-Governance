@@ -39,7 +39,7 @@ body:
     id: old_allocator_id
     attributes:
       label: "What was your old allocatorID?"
-      description: "Only if you have changed the wallet for on-chain DC allocation between rounds v5 and v6. If you don't know - you can find it in your old json as "allocator_id""
+      description: "Only if you have changed the wallet for on-chain DC allocation between rounds v5 and v6. If you don't know - you can find it in your old json as 'allocator_id'"
       placeholder: "f0..."
       
   - type: input
