@@ -23,6 +23,7 @@ body:
         - Public Open Data
         - Market Based Allocator
         - Automated Allocator
+        - Metaallocator
     validations:
       required: true
 
